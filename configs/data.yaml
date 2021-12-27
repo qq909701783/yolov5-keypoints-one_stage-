@@ -1,0 +1,9 @@
+# data path
+train: train_datas
+val: train_datas
+
+# number of classes
+nc: 1
+
+# class names
+names: ['ocr']

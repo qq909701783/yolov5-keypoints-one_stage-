@@ -3,12 +3,13 @@ import numpy as np
 import torch
 from utils.keypoints import group_keypoints,extract_keypoints
 from models.modules.experimental import *
+from models.modules.pose import *
 from models import Model
 
 
 stride = 8
 upsample_ratio = 4
-num_keypoints = 19
+num_keypoints = 4
 device = torch.device('cuda')
 
 
@@ -45,16 +46,16 @@ def demo(model,img_path):
         for key in keys:
             x = (int(key[0]) * stride / upsample_ratio)
             y = (int(key[1]) * stride / upsample_ratio)
-            draw = cv2.circle(draw, (int(x), int(y)),radius=3, color=[255, 0, 255], thickness=10, lineType=cv2.LINE_AA)
-            draw = cv2.putText(draw, str(id), (int(x), int(y)), cv2.FONT_HERSHEY_COMPLEX, 1, (100, 200, 200), 1)
+            draw = cv2.circle(draw, (int(x), int(y)),radius=2, color=255, thickness=-1, lineType=cv2.LINE_AA)
+            # draw = cv2.putText(draw, str(id), (int(x), int(y)), cv2.FONT_HERSHEY_COMPLEX, 1, (100, 200, 200), 1)
             cls_id+=1
         id+=1
 
-    cv2.imwrite('test.jpg',draw)
+    cv2.imwrite('test.png',draw)
 
 if __name__ == '__main__':
-    pt_path = r'runs/train/exp7/weights/last.pt'
-    img_path = r'VOC/images/train/2_51.jpg'
+    pt_path = r'runs/train/exp/weights/last.pt'
+    img_path = r'train_datas/yoloimages/0.jpg'
     cfg = r'configs/model_yolo.yaml'
     # model = Model(cfg).to(device)
     # model.load_state_dict(torch.load(pt_path)['model'])
