@@ -7,3 +7,7 @@
 首先来看问题：无法框全，如果扩大训练边框，则会框出别的物体
 
 ![image](https://github.com/qq909701783/yolov5-keypoints-one_stage-/blob/main/test.jpg)
+
+加入keypoint分支后与边框坐标相互约束，产生新的box：
+
+![image](https://github.com/qq909701783/yolov5-keypoints-one_stage-/blob/main/end.jpg)
