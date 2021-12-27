@@ -5,3 +5,4 @@
 这是个人一个比较有意思的工业问题解决思路(这里以ICDAR数据集为例)
 
 首先来看问题：
+![Alt text]https://github.com/qq909701783/yolov5-keypoints-one_stage-/blob/main/test.jpg
