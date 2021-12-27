@@ -6,4 +6,4 @@
 
 首先来看问题：
 
-![Alt text]https://github.com/qq909701783/yolov5-keypoints-one_stage-/blob/main/test.jpg
+![image](https://github.com/qq909701783/yolov5-keypoints-one_stage-/blob/main/test.jpg)
