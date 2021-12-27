@@ -1,4 +1,4 @@
-# yolov5-keypoints-one_stage-
+# yolov5-keypoints-one_stage
 该关键点检测为one_stage(非二阶段)
 
 这是一个基础版本，代码没怎么优化，如有疑问，请与本人进行技术交流
